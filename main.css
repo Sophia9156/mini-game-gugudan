@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Yeon+Sung&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.material-icons {font-family: 'Material Icons'; font-size: 10rem; vertical-align: middle;}
+body{margin: 0; background-color:rgb(159, 236, 255);}
+h2,p{margin: 0;}
+*{box-sizing: border-box;}
+section{width: 70%; height: 90vh; margin: 5vh auto; background-color: rgb(255, 243, 220); position: relative;}
+.description,.btn{width: 100%; margin: 0 auto; text-align: center;}
+.description>h2{padding: 50px 0; font-family: 'Black Han Sans', sans-serif; font-size: 2.5rem;}
+.description>p{margin-bottom: 10px; font-family: 'Yeon Sung', cursive; font-size: 1.2rem;}
+.question{width: 100%; margin:20px auto; text-align: center; display: flex; justify-content: center; align-items: flex-end;}
+.question>p>span{font-size: 8rem; vertical-align:text-bottom;}
+.question>p>span.waiting{animation: ani 1s linear infinite;}
+.question>p>span:nth-of-type(2).waiting{animation-delay: 0.3s;}
+.question>p>span:nth-of-type(3).waiting{animation-delay: 0.6s;}
+@keyframes ani {
+  0%{color: red;} 20%{color: blue;} 40%{color: yellow;} 60%{color:magenta;} 80%{color:lime;} 100%{color: red;}
+}
+.question>p:nth-of-type(2){margin-left: 30px; font-size: 1.2rem;}
+.question code{font-size: 2rem;}        
+.time{width: 80%; height: 20px; margin: 70px auto; border: 1px solid #000;}
+.time>p{width: 100%; height: 100%; background-color: rgb(251, 255, 0); transform-origin: left;}
+.btn>button{width: 100px; height: 50px; border-radius: 50px; margin: 0 30px; transition:.3s; cursor: pointer; font-size: 1.2rem; color: #888;}
+.lower{width: 100%; margin: 50px auto; display: flex; justify-content: center; align-items: center;}
+.answer>input{width: 300px; height: 70px; font-size: 2rem; vertical-align: middle;}
+.answer>button{width: 100px; height: 50px; margin-left: 20px; border-radius: 50px; font-size: 1.2rem; color: #888; transition:.3s; cursor: pointer;}
+.score{font-size: 2rem; margin: 0 50px;}
+.score>code{font-weight: 600;}
+.final{
+  position: fixed; left:0; top:0; width: 100%; height: 100vh; 
+  background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; flex-direction: column;
+  color: #fff; font-family: 'Yeon Sung', cursive;
+  display: none;
+}
+.final.active{display:flex;}
+.final>p{margin-bottom: 50px;}
+.final>p:nth-of-type(1){font-size: 2rem;}
+.final>p:nth-of-type(2){font-size: 3rem;}
+.final>button{width: 150px; height: 50px; border-radius: 50px; transition:.3s; cursor: pointer; font-size: 1.2rem; color: #888;}
+button:hover{background-color: rgb(251, 255, 0); color: #000;}
